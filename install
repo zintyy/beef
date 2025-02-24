@@ -27,12 +27,6 @@ command_exists() {
 get_permission() {
 
 	warn 'This script will install BeEF and its required dependencies (including operating system packages).'
-
-	read -rp "Are you sure you wish to continue (Y/n)? "
-	if [ "$(echo "${REPLY}" | tr "[:upper:]" "[:lower:]")" = "n" ]; then
-		fatal 'Installation aborted'
-	fi
-
 }
 
 check_os() {
