@@ -97,8 +97,7 @@ install_linux() {
 	info "OS Distribution: ${Distro}"
 	info "Installing ${Distro} prerequisite packages..."
 	if [ "${Distro}" = "Debian" ] || [ "${Distro}" = "Kali" ]; then
-		sudo apt-get update
-		sudo apt-get install curl git build-essential openssl libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison nodejs libcurl4-openssl-dev
+		apt-get install curl git build-essential openssl libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison nodejs libcurl4-openssl-dev
 		if command_exists rvm || command_exists rbenv; then
 			info "Ruby package Manager exists - Ruby install skipped"
 		else
